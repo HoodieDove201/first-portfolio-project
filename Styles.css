@@ -1,0 +1,395 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #222831;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    padding-top: 67px;
+}
+
+/*------------------------------------ Common ----------------------------------------*/
+
+.container{
+    background-color: #393E46;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+.jp{
+    font-family: "Shippori Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.sub-title{
+    margin: 0;
+    font-size: 3em;
+    color: #FFD369;
+    text-align: left;
+}
+.sub-sub-title{
+    color: #FFD369;
+    margin: 0;
+    font-size: 2.5em;
+}
+p{
+    margin: 0;
+}
+/*------------------------------------ Navigation Bar ----------------------------------------*/
+
+.nav-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #393E46;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 5px solid #222831;
+}
+ul{
+    list-style: none;
+    display: flex;  
+    margin: 0;
+}
+#name{
+    margin: 0 1.5em;
+    color: #FFD369;
+    font-size: 3em;
+}
+li{
+    padding: 20px 20px;
+    transition: ease-in-out 1s;
+}
+li:hover{
+    background-color: #605B51;
+    border-radius: 50px;
+}
+li a{
+    text-decoration: none;
+    color: #FFD369;
+    font-size: 1.5em;
+}
+header{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: white;
+    width: 600px;
+    height: 200px;
+    animation: glow 2.5s ease-in-out infinite alternate;
+
+}
+@keyframes glow {
+    from{box-shadow: 0;}
+    to  {box-shadow: 0px 0px 20px 0px rgb(193, 226, 255);}
+}
+.title{
+    color: #FFD369;
+    font-size: 4em;
+}
+
+/*------------------------------------ About ----------------------------------------*/
+#about{
+    padding: 80px 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+#about-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#about-text-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 45%;
+}
+#setup-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+}
+.about-text{
+    text-align: justify;
+    font-size: 2em;
+    color: #EEEEEE;
+}
+.about-img{
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+}
+
+#setup-container{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*------------------------------------ Skils ----------------------------------------*/
+#skills{
+    padding: 120px 2%;
+}
+#row-contents{
+    display: flex;
+    flex-direction: column;
+    height: 850px;
+    justify-content: space-between;
+}
+.row{
+    display: block;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    width: 70%;
+    padding: 20px 50px;
+    color: rgb(255, 247, 11);
+    background-color: rgba(255, 231, 48, 0.5);
+}
+.right{
+    margin-left: auto;
+}
+.row:hover{
+    background-color: rgba(255, 231, 48);
+    color: rgb(0, 7, 72);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from{box-shadow: 0px 0px 5px 0px rgb(193, 226, 255);}
+    to  {box-shadow: 0px 0px 20px 0px rgb(193, 226, 255);}
+}
+
+.row-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.row-p{
+    font-size: 2.5em;
+}
+.bar{
+    display: flex;
+    justify-content: left;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+}
+.row:hover .bar{
+    box-shadow: 5px 5px 8px 0px rgba(0, 7, 72);
+}
+.bar span{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(125deg,rgba(163, 163, 0, 0.412) 5%,yellow 100%);
+}
+.row:hover .bar span{
+    background: linear-gradient(125deg,rgba(255, 231, 48, 0.9) 5%,rgba(0, 7, 72, 0.74) 100%);
+}
+.percentage{
+    margin: 0;
+    margin-left: 15px;
+    font-size: 1.2em;
+    visibility:hidden;
+    overflow: hidden;
+}
+.row:hover .percentage{
+    visibility: visible;
+}
+.backend, .web, .algorithm{
+    width: 0;
+}
+.row:hover .backend{
+    width: 70%;
+    animation: ease backend 1.5s;
+}
+.row:hover .web{
+    width: 80%;
+    animation: ease web 1.5s;
+}
+.row:hover .algorithm{
+    width: 75%;
+    animation: ease algorithm 1.5s;
+}
+.row-text p{
+    font-size: 1.4em;
+}
+@keyframes backend{
+    0%{
+        width: 0%;
+    }
+    70%{
+        width: 70%;
+    }
+}
+@keyframes web {
+    0%{
+        width: 0;
+    }
+    80%{
+        width: 80%;
+    }
+}
+@keyframes algorithm {
+    0%{
+        width: 0;
+    }
+    75%{
+        width: 75%;
+    }
+}
+
+/*------------------------------------ Works ----------------------------------------*/
+
+#works-java-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+.works_img{
+    width: 500px;
+}
+.works_text{
+    width: 500px;
+}
+
+/*------------------------------------ Contact + Footer ----------------------------------------*/
+
+footer{
+    background-color: black;
+    border-radius: 30px 30px 0 0;
+    margin: 10px 0 0 0;
+    padding: 5px 10px;
+}
+#contact h2{
+    margin: 0;
+    font-size: 3em;
+    color: white;
+    text-align: left;
+}
+#contact_container{
+    margin: 200px 0;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact_container h1{
+    color: #FFD369;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    padding: 20px 30px;
+    color: #222831;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    transition: all 1s ease;
+    box-shadow: 0px 0px 10px 0px #FFD369;
+}
+form:hover{
+    box-shadow: 0px 0px 20px 5px rgb(193, 226, 255);
+}
+table{
+    width: 100%;
+}
+.form_row{
+    width: auto;
+    height: auto;
+}
+.formp {
+    width: 25%;
+    text-align: right;
+    font-size: 1.2em;
+}
+.forminput{
+    width: 75%;
+    text-align: center;
+}
+input[type=text], input[type=email], textarea{
+    width: 70%;
+    height: auto;
+    font-size: 14px;
+    padding : 10px 10px;
+    border-radius: 5px;
+    border: none;
+    margin : 8px;
+    background-color: #DDDDDD;
+    transition: all 0.6s ease;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    background-color:#222831;
+    color: white;
+    border: none;
+    font-size: 13px;
+    width: 85%;
+}
+textarea{
+    height: 36px;
+    overflow: hidden;
+}
+textarea:focus{
+    height: 150px;
+    overflow: auto;
+}
+#submit-reset{
+    margin-left: auto;
+}
+input[type=reset],input[type=submit]{
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    color:#222831;
+    background-color: #DDDDDD;
+    transition: all 0.3s ease-in-out;
+    float: right;
+    margin-right: 20px;
+}
+input[type=submit]:hover{
+    background-color: lightgreen;
+}
+input[type=reset]:hover{
+    background-color: lightcoral;
+}
+#footer{
+    background-color: black;
+    color: white;
+    padding: 30px 20px;
+    text-align: right;
+} 
