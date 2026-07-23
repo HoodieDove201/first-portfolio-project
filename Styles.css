@@ -370,7 +370,7 @@ textarea:focus{
 #submit-reset{
     margin-left: auto;
 }
-input[type=reset],input[type=submit]{
+input[type=reset],input[type=submit], input[type=button]{
     width: 80px;
     border-radius: 20px;
     border: none;
