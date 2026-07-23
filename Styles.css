@@ -9,6 +9,7 @@ body{
     padding: 0;
     padding-top: 67px;
     min-width: 600px;
+    height: auto;
 }
 
 /*------------------------------------ Common ----------------------------------------*/
