@@ -36,20 +36,16 @@
                         <div id="about-text-container"> 
                         
                         <p class="about-text jp">
-                            フールスタックエンジニアを目指しておるIT専門学生です。
+                            初めまして、Wai Lin Ooと申します。フールスタックエンジニアを目指しておるIT専門学生です。
                             現在、学校でIT系の基本的な知識を習い、自宅ではGitとAWSなどのスキルを身につけています。
                             「学び続ける姿勢」を大切にし、新しい技術にも積極的に挑戦しています。
                         </p>
                         </div>
-                        <div class="about-img">
-                            
-                        </div>
+                        <img class="about-img-right" src="img/pfp.jpg" alt="pfp">
                     </div>
-                    <div id="setup-container" class="container">
-                        <div class="about-img">
-                            
-                        </div>
-                        <div id="setup-text-container">
+                    <div id="about-container" class="container">
+                        <img class="about-img-left" src="img/WorkStation.jpg" alt="workstation">
+                        <div id="about-text-container">
                             <h3 class="sub-sub-title">WorkStation Setup</h3>
                             <p class="about-text jp">
                                 Ethernet（LAN）接続を利用し、2台のノートパソコンを連携させる環境を構築しました。メインPCと持ち運び用PCを接続し、持ち運び用PCをメインPCの仮想ディスプレイとして利用することで、メインPCから2台目のPCを操作できるシステムを実現しました。これにより、マルチディスプレイ環境を活用した効率的な作業環境を構築し、ネットワーク接続やリモートディスプレイ技術への理解を深めました。
@@ -108,19 +104,30 @@
             <section class="container">
                 <h2 class="sub-title">Works</h2>
                 <div id="works">
-                    <div id="works-java-container">
-                        <img class="works_img" src="img/Java.png" alt="java">
+                    <div id="works-container">
+                        <div>
+                            <hr class="topline">
+                            <img class="works_img" src="img/Java.png" alt="java">
+                            <hr>
+                        </div>
                         <div class="works_text">
                             <h2 class="works_subtitle">JKad27S</h2>
+                            <hr id="h2-line">
                             <p class="jp">10個のランダムな数字を順番（昇順）に並べ替える（ソートする）Javaコードです。</p>
                             <p class="jp">処理の流れはとてもシンプルで、まず配列を半分に区切り、前半と後半のグループをそれぞれバブルソートで並べ替えます。最後に、その綺麗に並んだ2つのグループを順番に並べ直して1つの大きな完成された配列に合体（マージ）させています。</p>
                         </div>
                     </div>
-                    <div id="works-web-container">
-                        <img class="works_img" src="" alt="web">
+                    <hr class="invisible-line">
+                    <div id="works-container">
                         <div class="works_text">
-                            <h2 class="works_subtitle"></h2>
-                            <p class="jp"></p>
+                            <h2 class="works_subtitle">ECC Pizza</h2>
+                            <hr id="h2-line">
+                            <p class="jp">このWebサイトは、架空のレストラン「ECC Pizza」のホームページです。店舗の紹介、人気メニューの写真と価格、最新ニュースなどを掲載し、利用者がレストランの情報を分かりやすく確認できるように設計しました。シンプルで見やすいデザインを意識し、快適に閲覧できるWebサイトを目指しました。</p>
+                        </div>
+                        <div>
+                            <hr class="topline">
+                            <img id="web-img" class="works_img" src="img/web.png" alt="web">
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -152,13 +159,17 @@
                             </tr>
                         </table>
                         <div id="submit-reset">
-                            <input type="button" name="Call" value="Call">
                             <input type="submit" name="submit" value="Send">
                             <input type="reset" name="reset" id="reset">
                         </div>
                     </form>
                 </div>
                 <div id="footer">
+                    <div>
+                        <a href=""><img class="icon" src="img/call.png" alt="call"></a>
+                        <a href="https://www.facebook.com"><img class="icon" src="img/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com"><img class="icon" src="img/instagram.png" alt="instagram"></a>
+                    </div>
                     <p>&copy; Wai Lin Oo's Portfolio. All Rights Reserved.</p>
                 </div>
             </section>
